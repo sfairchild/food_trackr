@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: food_trackr_api_production
-  username: food_trackr_api
-  password: <%= ENV['FOOD_TRACKR_API_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_DATABASE'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>

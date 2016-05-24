@@ -1,0 +1,20 @@
+app:
+  build: ./food_trackr_api
+  links:
+    - db
+  ports:
+    - "3000:3000"
+  environment:
+    RAILS_ENV: production
+    DB_HOST: db
+    DB_PORT: 5432
+    DB_ADAPTER: postgresql
+    DB_DATABASE: food_trackr
+    DB_USER: food_trackr
+    DB_PASS: food_trackr
+db:
+  image: postgres
+  environment:
+    DB_NAME: food_trackr
+    DB_USER: food_trackr
+    DB_PASS: food_trackr
